@@ -13,3 +13,28 @@ data class Main(
 data class Weather(
     val description: String
 )
+
+
+data class LocationResponse(
+    val Key: String,
+    val LocalizedName: String,
+    val Country: Country
+)
+
+data class Country(
+    val LocalizedName: String
+)
+
+data class CurrentConditionsResponse(
+    val WeatherText: String,
+    val Temperature: Temperature
+)
+
+data class Temperature(
+    val Metric: Metric
+)
+
+data class Metric(
+    val Value: Float,
+    val Unit: String
+)
